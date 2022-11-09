@@ -2,24 +2,23 @@
 async function getData(dataToAnalyse){
     let x_axis = [];
     let y_axis = [];
+
     //parsing the csv file to extract the year and temperature for data analysis
+     const response = await fetch(dataToAnalyse);
+     const data = await response.text();  
+    const dataRow = data.split("\n").slice(1);
     
-  const response = await fetch(dataToAnalyse);
-  const data = await response.text();  
-  const dataRow = data.split("\n").slice(1);
-    for(let i =0; i < dataRow.length; i++){
-        const row = dataRow[i]
+  dataRow.forEach((row)=>{
         const column = row.split(",");
         const year = column[0];
         const temp = column[1];
         x_axis.push(year);
         y_axis.push(temp);
-        
-    }
+    });
+
     
-    console.log(`year : ${x_axis}`);
-    console.log(`temperature : ${y_axis}`);
   return {x_axis, y_axis}
+   
   
 }
 
