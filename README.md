@@ -1,8 +1,8 @@
 # ChartData
 This program charts your data( parsed from a csv file ) in graphical format using the cartesian co-ordinates ( x-axis , y-axis ) to help for easier analysis.
 
-Note: A test file has already been created for you in the *public/csvFiles/ZonAnn.Ts+dSST (1).csv* to test out the program.
-
+Note: A test file has already been created for you in the *public/csvFiles/ZonAnn.Ts+dSST (1).csv* to test out the program.\
+[Test data used](https://data.giss.nasa.gov/gistemp/).
 ## Installing the project
 1. Clone the repository to your local machine by running the command, `git clone https://github.com/malachi43/chart-your-data.git` in your CLI (terminal). For this command to work you must have git installed. To download click [here](https://git-scm.com/downloads).
 
